@@ -1,22 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Interactive Quiz</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>The Greatest Magician of them All</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 19px; /* increased by 3 points */
+      margin: 40px;
+      line-height: 2.0; /* more sentence spacing */
+    }
+    select {
+      margin: 0 4px;
+      font-size: 19px;
+    }
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h1>HTML Basics Quiz</h1>
-  <form id="quiz-form">
-    <div>
-      <p>1. What does HTML stand for?</p>
-      <input type="radio" name="q1" value="a"> Home Tool Markup Language<br>
-      <input type="radio" name="q1" value="b"> HyperText Markup Language<br>
-      <input type="radio" name="q1" value="c"> Hyperlink Text Management Language<br>
-    </div>
-    <button type="button" onclick="submitQuiz()">Submit</button>
-  </form>
+  <h1>The Greatest Magician of them All</h1>
+  <p>
+    Magdoso <select data-answer="the"></select> Magnificent invites <select data-answer="a"></select> member of <select data-answer="the"></select> audience up onto <select data-answer="the"></select> stage. 
+    She asks <select data-answer="the"></select> audience member their name. <select data-answer="The"></select> audience member says her name is Weronika. 
+    Magdoso <select data-answer="the"></select> magician then takes <select data-answer="a"></select> deck of cards out from under her black cloak and splays out <select data-answer="the"></select> deck in front of Weronika. 
+    She says to Weronika “pick <select data-answer="a"></select> card, pick any card.” Weronika picks out <select data-answer="the"></select> Ten of Spades. 
+    Magdoso then says, “please look at <select data-answer="the"></select> card, but don't show me <select data-answer="the"></select> card, memorise it, then place <select data-answer="the"></select> card back in <select data-answer="the"></select> deck.” 
+    <select data-answer="The"></select> great magician shuffles <select data-answer="the"></select> deck, then extracts <select data-answer="a"></select> single card. 
+    She shows <select data-answer="the"></select> card to Weronika and asks her “was this <select data-answer="the"></select> card you chose?” Weronika replies that it was. 
+    <select data-answer="The"></select> audience goes wild. Weronika returns to her seat. 
+    Magdoso <select data-answer="the"></select> Magnificent takes <select data-answer="a"></select> deep bow, but as she does, she accidentally knocks <select data-answer="the"></select> deck of cards against her knee, and <select data-answer="the"></select> cards fall to <select data-answer="the"></select> stage floor. 
+    <select data-answer="The"></select> audience members in <select data-answer="the"></select> front row can now see that <select data-answer="the"></select> entire deck is made up 52 cards, all of which are <select data-answer="the"></select> Ten of Spades.
+  </p>
+  <p>
+    <select data-answer="A"></select> huge white rabbit bounds onto <select data-answer="the"></select> stage after Magdoso <select data-answer="the"></select> Magnificent has left. 
+    <select data-answer="The"></select> rabbit is wearing <select data-answer="a"></select> very tall, black, top hat. 
+    <select data-answer="The"></select> rabbit then announces to <select data-answer="the"></select> assembled audience “I will now perform <select data-answer="a"></select> feat of magic that will astound and confound you. 
+    I will extract <select data-answer="the"></select> great Magdoso <select data-answer="the"></select> now-not-quite-so-Magnificent from my top hat!” and then proceeds to do exactly as predicted. 
+    <select data-answer="The"></select> audience is shocked and awe stuck. They have never before seen <select data-answer="a"></select> rabbit wearing <select data-answer="a"></select> hat!
+  </p>
+  <p>
+    Magdoso <select data-answer="the"></select> now-not-quite-so-Magnificent now stands in front of <select data-answer="the"></select> audience knowing she has to regain their trust, so she calls on another member of <select data-answer="the"></select> audience to come up on <select data-answer="nothing"></select> stage. 
+    Magdoso then takes what looks like <select data-answer="a"></select> drawing pad used by <select data-answer="nothing"></select> artists out of <select data-answer="a"></select> shiny paper covered box she had brought on <select data-answer="nothing"></select> stage with her. 
+    <select data-answer="The"></select> audience member is now on <select data-answer="the"></select> stage facing <select data-answer="the"></select> magician. 
+    Magdoso asks <select data-answer="the"></select> gentleman “have we ever met before?” <select data-answer="The"></select> gentleman responds in <select data-answer="the"></select> negative. 
+    Magdoso then asks <select data-answer="the"></select> gentleman “what is your name?” <select data-answer="The"></select> gentleman answers “Nigel”, Magdoso then asks <select data-answer="the"></select> gentleman “what is <select data-answer="the"></select> name your parents gave you?” 
+    <select data-answer="The"></select> gentleman, now slightly confused, answers “Nigel.” 
+    Magdoso then asks him how old he is, how old he was when he was born, how many years ago that was, where he works, what kind of work he does, and why does he do it. 
+    Nigel answers all <select data-answer="the"></select> questions. 
+    Magdoso <select data-answer="the"></select> Magnificent then shows <select data-answer="the"></select> artist’s drawing pad to Nigel and asks in <select data-answer="a"></select> triumphant voice “is this <select data-answer="an"></select> accurate reproduction of your face?” 
+    Nigel looks extremely surprised and replies, “My goodness! Yes, yes, it is <select data-answer="an"></select> extremely accurate reproduction of my face!!!” 
+    <select data-answer="The"></select> audience go wild again. 
+    As Magdoso <select data-answer="the"></select> Magnificent takes <select data-answer="a"></select> well-deserved bow <select data-answer="the"></select> audience can see that <select data-answer="the"></select> other side of <select data-answer="the"></select> artist’s pad is actually <select data-answer="a"></select> mirror.
+  </p>
+
   <div id="result"></div>
 
-  <script src="script.js"></script>
+  <script>
+    const options = ["the", "a", "an", "nothing"];
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [
+          array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    // Populate all selects with randomized options, empty default
+    document.querySelectorAll("select").forEach(select => {
+      let emptyOption = document.createElement("option");
+      emptyOption.value = "";
+      emptyOption.textContent = "";
+      select.appendChild(emptyOption);
+
+      let shuffled = shuffle([...options]);
+      shuffled.forEach(opt => {
+        let option = document.createElement("option");
+        option.value = opt;
+        option.textContent = opt;
+        select.appendChild(option);
+      });
+
+      // Immediate feedback on change
+      select.addEventListener("change", () => {
+        let answer = select.dataset.answer.trim().toLowerCase();
+        let user = select.value.trim().toLowerCase();
+        if (user === answer) {
+          select.classList.remove("incorrect");
+          select.classList.add("correct");
+        } else {
+          select.classList.remove("correct");
+          select.classList.add("incorrect");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
